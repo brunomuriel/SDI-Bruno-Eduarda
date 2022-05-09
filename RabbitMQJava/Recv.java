@@ -1,5 +1,5 @@
 import com.rabbitmq.client.*;
-
+import java.util.HashMap;
 import java.io.IOException;
 
 public class Recv {
