@@ -1,5 +1,4 @@
 import com.rabbitmq.client.*;
-import java.util.HashMap;
 import java.io.IOException;
 
 public class Recv {
@@ -13,11 +12,8 @@ public class Recv {
     Connection connection = factory.newConnection();
     Channel channel = connection.createChannel();
 
-    Map<String, Object> args = new HashMap<String, Object>();
-    args.put("x-max-priority", 10);
-
-    channel.queueDeclare(QUEUE_1_NAME, false, false, false, args);
-    channel.queueDeclare(QUEUE_2_NAME, false, false, false, args);
+    channel.queueDeclare(QUEUE_1_NAME, false, false, false, null);
+    channel.queueDeclare(QUEUE_2_NAME, false, false, false, null);
 
     System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
