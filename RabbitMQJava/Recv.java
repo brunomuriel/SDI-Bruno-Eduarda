@@ -13,8 +13,11 @@ public class Recv {
     Connection connection = factory.newConnection();
     Channel channel = connection.createChannel();
 
-    channel.queueDeclare(QUEUE_1_NAME, false, false, false, null);
-    channel.queueDeclare(QUEUE_2_NAME, false, false, false, null);
+    Map<String, Object> args = new HashMap<String, Object>();
+    args.put("x-max-priority", 10);
+
+    channel.queueDeclare(QUEUE_1_NAME, false, false, false, args);
+    channel.queueDeclare(QUEUE_2_NAME, false, false, false, args);
 
     System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
