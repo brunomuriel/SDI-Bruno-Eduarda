@@ -14,14 +14,14 @@ public class Send {
     Channel channel = connection.createChannel();
 
     channel.queueDeclare(QUEUE_1_NAME, false, false, false, null);
-    String message = "Hello World!";
-    channel.basicPublish("", QUEUE_1_NAME, null, message.getBytes("UTF-8"));
-    System.out.println(" [Queue 1] Sent '" + message + "'");
+    String message1 = "Hello World!";
+    channel.basicPublish("", QUEUE_1_NAME, null, message1.getBytes("UTF-8"));
+    System.out.println(" [Queue 1] Sent '" + message1 + "'");
 
     channel.queueDeclare(QUEUE_2_NAME, false, false, false, null);
-    String message = "Hello World!";
-    channel.basicPublish("", QUEUE_2_NAME, null, message.getBytes("UTF-8"));
-    System.out.println(" [Queue 2] Sent '" + message + "'");
+    String message2 = "Hello World!";
+    channel.basicPublish("", QUEUE_2_NAME, null, message2.getBytes("UTF-8"));
+    System.out.println(" [Queue 2] Sent '" + message2 + "'");
 
     channel.close();
     connection.close();
