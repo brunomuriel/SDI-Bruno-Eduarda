@@ -18,16 +18,25 @@ public class Recv {
 
     System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
-    Consumer consumer = new DefaultConsumer(channel) {
+    Consumer consumer1 = new DefaultConsumer(channel) {
       @Override
       public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body)
           throws IOException {
         String message = new String(body, "UTF-8");
-        System.out.println(" [x] Received '" + message + "'");
+        System.out.println(" [Queue 1] Received '" + message + "'");
       }
     };
 
-    channel.basicConsume(QUEUE_1_NAME, true, consumer);
-    channel.basicConsume(QUEUE_2_NAME, true, consumer);
+     Consumer consumer2 = new DefaultConsumer(channel) {
+      @Override
+      public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body)
+          throws IOException {
+        String message = new String(body, "UTF-8");
+        System.out.println(" [Queue 2] Received '" + message + "'");
+      }
+    };
+
+    channel.basicConsume(QUEUE_1_NAME, true, consumer1);
+    channel.basicConsume(QUEUE_2_NAME, true, consumer2);
   }
 }
