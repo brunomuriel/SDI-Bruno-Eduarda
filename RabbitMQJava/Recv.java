@@ -1,5 +1,6 @@
 import com.rabbitmq.client.*;
 import java.io.IOException;
+import java.util.*;
 
 public class Recv {
 
@@ -35,7 +36,16 @@ public class Recv {
       }
     };
 
-    channel.basicConsume(QUEUE_1_NAME, true, consumer1);
-    channel.basicConsume(QUEUE_2_NAME, true, consumer2);
+    Map<String, Object> args1 = new HashMap<String, Object>();
+    args1.put("x-priority", 10);
+
+    Map<String, Object> args2 = new HashMap<String, Object>();
+    args2.put("x-priority", 9);
+
+    channel.basicConsume(QUEUE_1_NAME, false, "", false, false, args1, consumer1);
+    channel.basicConsume(QUEUE_2_NAME, false, "", false, false, args2, consumer2);
+
+    // channel.basicConsume(QUEUE_1_NAME, true, consumer1);
+    // channel.basicConsume(QUEUE_2_NAME, true, consumer2);
   }
 }
