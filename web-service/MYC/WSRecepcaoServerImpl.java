@@ -23,7 +23,7 @@ public class WSRecepcaoServerImpl implements WSRecepcaoServer {
   }
 
   public void setServer(Integer nclients) {
-    //System.out.println("["+nclients+"]");
+    // System.out.println("["+nclients+"siii]");
     try {
       setNroClient(nclients);
     } catch (Exception e) {

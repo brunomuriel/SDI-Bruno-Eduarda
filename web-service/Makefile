@@ -1,12 +1,17 @@
-# GNU Makefile
-JAR=/usr/local/jdk1.8.0_131/bin/jar
-JAVA=/usr/local/jdk1.8.0_131/bin/java
-JAVAC=/usr/local/jdk1.8.0_131/bin/javac
+# GNU Makefile - ORIGINAL 
+# JAR=/usr/local/jdk1.8.0_131/bin/jar
+# JAVA=/usr/local/jdk1.8.0_131/bin/java
+# JAVAC=/usr/local/jdk1.8.0_131/bin/javac
+
+#Local - Eduarda
+JAR=/usr/lib/jvm/java-8-openjdk-amd64/bin/jar
+JAVA=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+JAVAC=/usr/lib/jvm/java-8-openjdk-amd64/bin/javac
 
 JFLAGS = -g
 .SUFFIXES: MYC/.java .class
 .java.class:
-	$(JAVAC) $(JFLAGS) MYC\$*.java
+	$(JAVAC) $(JFLAGS) MYC\$*.java --add-modules java.xml.bind
 
 default: Client ServerPublisher WSPandeloServerImpl WSPandeloServer WSCortesServerImpl WSCortesServer WSRecepcaoServerImpl WSRecepcaoServer
 

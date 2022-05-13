@@ -9,6 +9,10 @@ import javax.xml.ws.Endpoint;
 import java.util.*;
 import java.io.*;
 
+// import java.xml.bind;
+// import javax.xml.bind.JAXBException;
+
+
 public class ServerPublisher {
 
 	static void printReport() {
@@ -38,8 +42,8 @@ public class ServerPublisher {
 				switch (word[0]) {
 					case "NClientes":
 					      srecepcao.setServer(Integer.parseInt(word[2]));
+						  System.out.println("Número de clientes: " +  srecepcao.getNroClient());
 					      break;
-
 					// continuar código da leitura das configurações
 
 					default:
@@ -56,7 +60,10 @@ public class ServerPublisher {
 
 		String host = args[0];
 
-		System.out.println("* SERVER: Beginning to publish WS Servers ("+host+") *");
+		System.out.print("oi\n");
+
+
+		System.out.println("* SERVER: Beginning to publish WS Servers ("+host+") * \n");
 
 		// WS Recepcao
 		Endpoint ep = Endpoint.create(new WSRecepcaoServerImpl());
