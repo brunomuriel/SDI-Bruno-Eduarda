@@ -50,6 +50,8 @@ public class ServerPublisher {
 						  System.out.println("Número de clientes: " +  srecepcao.getNroClient());
 					      break;
 					// continuar código da leitura das configurações
+
+					//Criar outra var pro cliente !!!!! clientes totais
 					
 
 					default:
