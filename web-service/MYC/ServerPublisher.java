@@ -25,9 +25,54 @@ public class ServerPublisher {
       System.out.println("###########");
 	}
 
-	static void readSetup (String host, WSRecepcaoServer srecepcao) {
+	static void readClient (String host, WSCoberturaServer scobertura, WSCortesServer scortes, WSPandeloServer spandelo, WSRecheiosServer srecheios) {
 
 		int cliente;
+		Dictionary guiches = new Hashtable();  
+
+		try {
+			Scanner sc = new Scanner(System.in);
+			while(true){
+				if (!sc.hasNextLine()) {
+					break;
+				}
+				String newline = sc.nextLine();
+				BufferedReader inFromUser
+				= new BufferedReader(new InputStreamReader(System.in));
+				String[] word = newline.split(" ");
+				switch (word[0]) {
+
+					case "****":
+						cliente = Integer.parseInt(word[2]);
+					break;
+
+					case "WS-Pandelo":
+						spandelo.getPandelo(word[2]);
+					break;
+
+					case "WS-Cortes":
+						scortes.getCortes(word[2]);
+					break;
+
+					case "WS-Cobertura":
+						scobertura.getCobertura(word[2]);
+					break;
+
+					case "WS-Recheios":
+						srecheios.getRecheios(word[2]);
+					break;
+
+					default:
+						// System.out.println("Ignorado: ("+word[0]+")");
+				}
+			}
+			sc.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	static void readSetup (String host, WSRecepcaoServer srecepcao) {
 
 		try {
 			Scanner sc = new Scanner(System.in);
@@ -43,18 +88,6 @@ public class ServerPublisher {
 					case "NClientes":
 					    srecepcao.setServer(Integer.parseInt(word[2]));
 					break;
-
-					// case "Guiche":
-					//     srecepcao.setServer(Integer.parseInt(word[2]));
-					// break;
-
-					case "****":
-						cliente = Integer.parseInt(word[2]);
-					break;
-
-					// case "WS-Pandelo":
-					// 	spandelo.getPandelo(word[2]);
-					// break;
 
 					default:
 						// System.out.println("Ignorado: ("+word[0]+")");
@@ -101,39 +134,39 @@ public class ServerPublisher {
 			"WSRecepcaoServerImplService");
 
 			// // ##### WS Cobertura  #####
-			// URL url2 = new URL("http://"+host+":9896/WSCobertura?wsdl");
-			// QName qname2 = new QName("http://MYC/",
-			// "WSCoberturaServerImplService");
+			URL url2 = new URL("http://"+host+":9896/WSCobertura?wsdl");
+			QName qname2 = new QName("http://MYC/",
+			"WSCoberturaServerImplService");
 
 			// // ##### WS Cortes  #####
-			// URL url3 = new URL("http://"+host+":9899/WSCortes?wsdl");
-			// QName qname3 = new QName("http://MYC/",
-			// "WSCortesServerImplService");
+			URL url3 = new URL("http://"+host+":9899/WSCortes?wsdl");
+			QName qname3 = new QName("http://MYC/",
+			"WSCortesServerImplService");
 
 			// // ##### WS Pandelo  #####
-			// URL url4 = new URL("http://"+host+":9898/WSPandelo?wsdl");
-			// QName qname4 = new QName("http://MYC/",
-			// "WSPandeloServerImplService");
+			URL url4 = new URL("http://"+host+":9898/WSPandelo?wsdl");
+			QName qname4 = new QName("http://MYC/",
+			"WSPandeloServerImplService");
 
 			// // ##### WS Recheios  #####
-			// URL url5 = new URL("http://"+host+":9899/WSRecheios?wsdl");
-			// QName qname5 = new QName("http://MYC/",
-			// "WSRecheiosServerImplService");
+			URL url5 = new URL("http://"+host+":9899/WSRecheios?wsdl");
+			QName qname5 = new QName("http://MYC/",
+			"WSRecheiosServerImplService");
 
 			Service recepcao = Service.create(url1, qname1);
 			WSRecepcaoServer srecepcao = recepcao.getPort(WSRecepcaoServer.class);
 
-			// Service cobertura = Service.create(url2, qname2);
-			// WSCoberturaServer scobertura = cobertura.getPort(WSCoberturaServer.class);
+			Service cobertura = Service.create(url2, qname2);
+			WSCoberturaServer scobertura = cobertura.getPort(WSCoberturaServer.class);
 
-			// Service cortes = Service.create(url3, qname3);
-			// WSCortesServer scortes = cortes.getPort(WSCortesServer.class);
+			Service cortes = Service.create(url3, qname3);
+			WSCortesServer scortes = cortes.getPort(WSCortesServer.class);
 
-			// Service pandelo = Service.create(url4, qname4);
-			// WSPandeloServer spandelo = pandelo.getPort(WSPandeloServer.class);
+			Service pandelo = Service.create(url4, qname4);
+			WSPandeloServer spandelo = pandelo.getPort(WSPandeloServer.class);
 
-			// Service recheios = Service.create(url5, qname5);
-			// WSRecheiosServer srecheios = recheios.getPort(WSRecheiosServer.class);
+			Service recheios = Service.create(url5, qname5);
+			WSRecheiosServer srecheios = recheios.getPort(WSRecheiosServer.class);
 
 			InetAddress addr = InetAddress.getLocalHost();
 			String hostname = addr.getHostName();
@@ -141,7 +174,8 @@ public class ServerPublisher {
 			Boolean flag = true;
 			while (flag) { // Pooling aguardando clientes
 
-        TimeUnit.SECONDS.sleep(1);
+                TimeUnit.SECONDS.sleep(1);
+
 				if (srecepcao.getNroClient() <= 0) {
 					System.out.println("* Server End *");
 					flag = false;
@@ -152,6 +186,10 @@ public class ServerPublisher {
 					ep_rec.stop();
 					printReport();
 				}
+
+
+
+
 			}
 
 
