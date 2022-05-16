@@ -11,4 +11,5 @@ public interface WSPandeloServer {
 
 	@WebMethod
 	String getPandelo(String host, String name);
+	int getNPandelos();
 }

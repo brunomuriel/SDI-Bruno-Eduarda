@@ -7,9 +7,9 @@ import javax.jws.soap.SOAPBinding.Style;
 
 @WebService
 @SOAPBinding(style = Style.RPC)
-public interface WSCortesServer {
+public interface WSCoberturaServer {
 
 	@WebMethod
-	String getCortes(String name);
-	int getNCortes();
+	String getCobertura(String name);
+	int getNCoberturas();
 }
