@@ -82,7 +82,7 @@ public class ServerPublisher {
 
 		// WS Cortes
 		Endpoint ep_cor = Endpoint.create(new WSCortesServerImpl());
-		ep_cor.publish("http://"+host+":9849/WSCortes");
+		ep_cor.publish("http://"+host+":9847/WSCortes");
 
 		// WS Cobertura
 		Endpoint ep_cob = Endpoint.create(new WSCoberturaServerImpl());
@@ -101,22 +101,22 @@ public class ServerPublisher {
 			"WSRecepcaoServerImplService");
 
 			// // ##### WS Cobertura  #####
-			// URL url2 = new URL("http://"+host+":9896/WSCobertura?wsdl");
+			URL url2 = new URL("http://"+host+":9846/WSCobertura?wsdl");
 			QName qname2 = new QName("http://MYC/",
 			"WSCoberturaServerImplService");
 
 			// ##### WS Cortes  #####
-			URL url3 = new URL("http://"+host+":9899/WSCortes?wsdl");
+			URL url3 = new URL("http://"+host+":9847/WSCortes?wsdl");
 			QName qname3 = new QName("http://MYC/",
 			"WSCortesServerImplService");
 
 			// ##### WS Pandelo  #####
-			URL url4 = new URL("http://"+host+":9898/WSPandelo?wsdl");
+			URL url4 = new URL("http://"+host+":9848/WSPandelo?wsdl");
 			QName qname4 = new QName("http://MYC/",
 			"WSPandeloServerImplService");
 
 			// ##### WS Recheios  #####
-			URL url5 = new URL("http://"+host+":9899/WSRecheios?wsdl");
+			URL url5 = new URL("http://"+host+":9849/WSRecheios?wsdl");
 			QName qname5 = new QName("http://MYC/",
 			"WSRecheiosServerImplService");
 
