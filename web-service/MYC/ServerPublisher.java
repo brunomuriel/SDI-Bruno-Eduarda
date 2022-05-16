@@ -74,29 +74,29 @@ public class ServerPublisher {
 
 		// WS Recepcao
 		Endpoint ep = Endpoint.create(new WSRecepcaoServerImpl());
-		ep.publish("http://"+host+":9895/WSRecepcao");
+		ep.publish("http://"+host+":9845/WSRecepcao");
 
 		// WS Pandelo
 		Endpoint ep_pan = Endpoint.create(new WSPandeloServerImpl());
-		ep_pan.publish("http://"+host+":9896/WSPandelo");
+		ep_pan.publish("http://"+host+":9846/WSPandelo");
 
 		// WS Cortes
 		Endpoint ep_cor = Endpoint.create(new WSCortesServerImpl());
-		ep_cor.publish("http://"+host+":9899/WSCortes");
+		ep_cor.publish("http://"+host+":9849/WSCortes");
 
 		// WS Cobertura
 		Endpoint ep_cob = Endpoint.create(new WSCoberturaServerImpl());
-		ep_cob.publish("http://"+host+":9898/WSCobertura");
+		ep_cob.publish("http://"+host+":9848/WSCobertura");
 
 		// WS Recheios
 		Endpoint ep_rec = Endpoint.create(new WSRecheiosServerImpl());
-		ep_rec.publish("http://"+host+":9899/WSRecheios");
+		ep_rec.publish("http://"+host+":9849/WSRecheios");
 
 		System.out.println("* All done publishing. *");
 
 		try {
 			// ##### WS Recepcao  #####
-			URL url1 = new URL("http://"+host+":9895/WSRecepcao?wsdl");
+			URL url1 = new URL("http://"+host+":9845/WSRecepcao?wsdl");
 			QName qname1 = new QName("http://MYC/",
 			"WSRecepcaoServerImplService");
 
