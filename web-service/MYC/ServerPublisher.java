@@ -28,7 +28,7 @@ public class ServerPublisher {
 	static void readClient (String host, WSCoberturaServer scobertura, WSCortesServer scortes, WSPandeloServer spandelo, WSRecheiosServer srecheios) {
 
 		int cliente;
-		Dictionary guiches = new Hashtable();  
+		int[] guiches = [0, 0, 0, 0];
 
 		try {
 			Scanner sc = new Scanner(System.in);
@@ -48,18 +48,22 @@ public class ServerPublisher {
 
 					case "WS-Pandelo":
 						spandelo.getPandelo(word[2]);
+						guiches[0] = guiches[0] + 1;
 					break;
 
 					case "WS-Cortes":
 						scortes.getCortes(word[2]);
+						guiches[1] = guiches[1] + 1;
 					break;
 
 					case "WS-Cobertura":
 						scobertura.getCobertura(word[2]);
+						guiches[2] = guiches[2] + 1;
 					break;
 
 					case "WS-Recheios":
 						srecheios.getRecheios(word[2]);
+						guiches[3] = guiches[3] + 1;
 					break;
 
 					default:
@@ -134,22 +138,22 @@ public class ServerPublisher {
 			"WSRecepcaoServerImplService");
 
 			// // ##### WS Cobertura  #####
-			URL url2 = new URL("http://"+host+":9896/WSCobertura?wsdl");
+			URL url2 = new URL("http://"+host+":9846/WSCobertura?wsdl");
 			QName qname2 = new QName("http://MYC/",
 			"WSCoberturaServerImplService");
 
 			// // ##### WS Cortes  #####
-			URL url3 = new URL("http://"+host+":9899/WSCortes?wsdl");
+			URL url3 = new URL("http://"+host+":9849/WSCortes?wsdl");
 			QName qname3 = new QName("http://MYC/",
 			"WSCortesServerImplService");
 
 			// // ##### WS Pandelo  #####
-			URL url4 = new URL("http://"+host+":9898/WSPandelo?wsdl");
+			URL url4 = new URL("http://"+host+":9848/WSPandelo?wsdl");
 			QName qname4 = new QName("http://MYC/",
 			"WSPandeloServerImplService");
 
 			// // ##### WS Recheios  #####
-			URL url5 = new URL("http://"+host+":9899/WSRecheios?wsdl");
+			URL url5 = new URL("http://"+host+":9849/WSRecheios?wsdl");
 			QName qname5 = new QName("http://MYC/",
 			"WSRecheiosServerImplService");
 
