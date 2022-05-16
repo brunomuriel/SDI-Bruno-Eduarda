@@ -101,7 +101,7 @@ public class ServerPublisher {
 			"WSRecepcaoServerImplService");
 
 			// // ##### WS Cobertura  #####
-			URL url2 = new URL("http://"+host+":9846/WSCobertura?wsdl");
+			URL url2 = new URL("http://"+host+":9846/WSCoberturaServer?wsdl");
 			QName qname2 = new QName("http://MYC/",
 			"WSCoberturaServerImplService");
 
