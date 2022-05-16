@@ -40,8 +40,6 @@ public class ServerPublisher {
 				= new BufferedReader(new InputStreamReader(System.in));
 				String[] word = newline.split(" ");
 				
-				System.out.print("oi\n");
-
 				switch (word[0]) {
 					case "NClientes":
 					      srecepcao.setServer(Integer.parseInt(word[2]));
