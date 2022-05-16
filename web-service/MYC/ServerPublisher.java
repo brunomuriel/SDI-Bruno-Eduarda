@@ -25,7 +25,7 @@ public class ServerPublisher {
       System.out.println("###########");
 	}
 
-	static void readSetup (String host, WSRecepcaoServer srecepcao, WSCoberturaServer scobertura, WSCortesServer scortes, WSPandeloServer spandelo, WSRecheiosServer srecheios) {
+	static void readSetup (String host, WSRecepcaoServer srecepcao) {
 
 		int cliente;
 
