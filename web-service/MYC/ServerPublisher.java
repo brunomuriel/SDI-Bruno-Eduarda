@@ -15,7 +15,7 @@ import java.io.*;
 
 public class ServerPublisher {
 
-	static void printReport() {
+	static void printReport(WSRecepcaoServer srecepcao) {
       System.out.println("##  Servidor  ##");
       System.out.println("Status: finalizado");
       System.out.println("Nro_clientes_atendidos: " +  srecepcao.getNroClient());
@@ -110,7 +110,7 @@ public class ServerPublisher {
 					// ...
 
 					// ...
-					printReport();
+					printReport(srecepcao);
 				}
 			}
 
