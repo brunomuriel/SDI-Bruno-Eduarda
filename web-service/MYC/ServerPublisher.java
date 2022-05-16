@@ -18,7 +18,7 @@ public class ServerPublisher {
 	static void printReport() {
       System.out.println("##  Servidor  ##");
       System.out.println("Status: finalizado");
-      System.out.println("Nro_clientes_atendidos: 2");
+      System.out.println("Nro_clientes_atendidos: " +  srecepcao.getNroClient());
       System.out.println("WS-Pandelo (ens1): 4");
       System.out.println("WS-Cobertura (ens1): 2");
       System.out.println("WS-Recheio (ens1): 8");
@@ -46,6 +46,7 @@ public class ServerPublisher {
 						  System.out.println("Número de clientes: " +  srecepcao.getNroClient());
 					      break;
 					// continuar código da leitura das configurações
+					
 
 					default:
 						// System.out.println("Ignorado: ("+word[0]+")");
