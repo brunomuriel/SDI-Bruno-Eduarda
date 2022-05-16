@@ -123,17 +123,17 @@ public class ServerPublisher {
 			Service recepcao = Service.create(url1, qname1);
 			WSRecepcaoServer srecepcao = recepcao.getPort(WSRecepcaoServer.class);
 
-			Service cobertura = Service.create(url2, qname2);
-			WSCoberturaServer scobertura = cobertura.getPort(WSCoberturaServer.class);
+			// Service cobertura = Service.create(url2, qname2);
+			// WSCoberturaServer scobertura = cobertura.getPort(WSCoberturaServer.class);
 
-			Service cortes = Service.create(url3, qname3);
-			WSCortesServer scortes = cortes.getPort(WSCortesServer.class);
+			// Service cortes = Service.create(url3, qname3);
+			// WSCortesServer scortes = cortes.getPort(WSCortesServer.class);
 
-			Service pandelo = Service.create(url4, qname4);
-			WSPandeloServer spandelo = pandelo.getPort(WSPandeloServer.class);
+			// Service pandelo = Service.create(url4, qname4);
+			// WSPandeloServer spandelo = pandelo.getPort(WSPandeloServer.class);
 
-			Service recheios = Service.create(url5, qname5);
-			WSRecheiosServer srecheios = recheios.getPort(WSRecheiosServer.class);
+			// Service recheios = Service.create(url5, qname5);
+			// WSRecheiosServer srecheios = recheios.getPort(WSRecheiosServer.class);
 
 			InetAddress addr = InetAddress.getLocalHost();
 			String hostname = addr.getHostName();
