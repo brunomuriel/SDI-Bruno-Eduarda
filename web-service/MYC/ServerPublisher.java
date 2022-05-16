@@ -107,6 +107,9 @@ public class ServerPublisher {
 				if (srecepcao.getNroClient() <= 0) {
 					System.out.println("* Server End *");
 					flag = false;
+					
+					printReport(srecepcao);
+					
 					ep.stop();
 					ep_pan.stop();
 					ep_cor.stop();
@@ -114,7 +117,6 @@ public class ServerPublisher {
 					// ...
 
 					// ...
-					printReport(srecepcao);
 				}
 			}
 
