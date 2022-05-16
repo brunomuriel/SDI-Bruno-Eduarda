@@ -191,8 +191,7 @@ public class ServerPublisher {
 					printReport();
 				}
 
-
-
+				readClient(scobertura, scortes, spandelo, srecheios);
 
 			}
 
