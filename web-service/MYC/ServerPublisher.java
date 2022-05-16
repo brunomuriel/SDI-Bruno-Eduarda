@@ -28,7 +28,7 @@ public class ServerPublisher {
 	static void readClient (String host, WSCoberturaServer scobertura, WSCortesServer scortes, WSPandeloServer spandelo, WSRecheiosServer srecheios) {
 
 		int cliente;
-		int[] guiches;
+		int guiches[] = {0, 0, 0, 0};
 
 		try {
 			Scanner sc = new Scanner(System.in);
