@@ -137,7 +137,7 @@ public class ServerPublisher {
 
 			InetAddress addr = InetAddress.getLocalHost();
 			String hostname = addr.getHostName();
-			readSetup(host, srecepcao, scobertura, scortes, spandelo, srecheios);
+			readSetup(host, srecepcao);
 			Boolean flag = true;
 			while (flag) { // Pooling aguardando clientes
 
