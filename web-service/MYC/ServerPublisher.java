@@ -102,38 +102,38 @@ public class ServerPublisher {
 
 			// // ##### WS Cobertura  #####
 			// URL url2 = new URL("http://"+host+":9896/WSCobertura?wsdl");
-			// QName qname2 = new QName("http://MYC/",
-			// "WSCoberturaServerImplService");
+			QName qname2 = new QName("http://MYC/",
+			"WSCoberturaServerImplService");
 
-			// // ##### WS Cortes  #####
-			// URL url3 = new URL("http://"+host+":9899/WSCortes?wsdl");
-			// QName qname3 = new QName("http://MYC/",
-			// "WSCortesServerImplService");
+			// ##### WS Cortes  #####
+			URL url3 = new URL("http://"+host+":9899/WSCortes?wsdl");
+			QName qname3 = new QName("http://MYC/",
+			"WSCortesServerImplService");
 
-			// // ##### WS Pandelo  #####
-			// URL url4 = new URL("http://"+host+":9898/WSPandelo?wsdl");
-			// QName qname4 = new QName("http://MYC/",
-			// "WSPandeloServerImplService");
+			// ##### WS Pandelo  #####
+			URL url4 = new URL("http://"+host+":9898/WSPandelo?wsdl");
+			QName qname4 = new QName("http://MYC/",
+			"WSPandeloServerImplService");
 
-			// // ##### WS Recheios  #####
-			// URL url5 = new URL("http://"+host+":9899/WSRecheios?wsdl");
-			// QName qname5 = new QName("http://MYC/",
-			// "WSRecheiosServerImplService");
+			// ##### WS Recheios  #####
+			URL url5 = new URL("http://"+host+":9899/WSRecheios?wsdl");
+			QName qname5 = new QName("http://MYC/",
+			"WSRecheiosServerImplService");
 
 			Service recepcao = Service.create(url1, qname1);
 			WSRecepcaoServer srecepcao = recepcao.getPort(WSRecepcaoServer.class);
 
-			// Service cobertura = Service.create(url2, qname2);
-			// WSCoberturaServer scobertura = cobertura.getPort(WSCoberturaServer.class);
+			Service cobertura = Service.create(url2, qname2);
+			WSCoberturaServer scobertura = cobertura.getPort(WSCoberturaServer.class);
 
-			// Service cortes = Service.create(url3, qname3);
-			// WSCortesServer scortes = cortes.getPort(WSCortesServer.class);
+			Service cortes = Service.create(url3, qname3);
+			WSCortesServer scortes = cortes.getPort(WSCortesServer.class);
 
-			// Service pandelo = Service.create(url4, qname4);
-			// WSPandeloServer spandelo = pandelo.getPort(WSPandeloServer.class);
+			Service pandelo = Service.create(url4, qname4);
+			WSPandeloServer spandelo = pandelo.getPort(WSPandeloServer.class);
 
-			// Service recheios = Service.create(url5, qname5);
-			// WSRecheiosServer srecheios = recheios.getPort(WSRecheiosServer.class);
+			Service recheios = Service.create(url5, qname5);
+			WSRecheiosServer srecheios = recheios.getPort(WSRecheiosServer.class);
 
 			InetAddress addr = InetAddress.getLocalHost();
 			String hostname = addr.getHostName();
