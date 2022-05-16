@@ -100,25 +100,25 @@ public class ServerPublisher {
 			QName qname1 = new QName("http://MYC/",
 			"WSRecepcaoServerImplService");
 
-			// ##### WS Cobertura  #####
-			URL url2 = new URL("http://"+host+":9896/WSCobertura?wsdl");
-			QName qname2 = new QName("http://MYC/",
-			"WSCoberturaServerImplService");
+			// // ##### WS Cobertura  #####
+			// URL url2 = new URL("http://"+host+":9896/WSCobertura?wsdl");
+			// QName qname2 = new QName("http://MYC/",
+			// "WSCoberturaServerImplService");
 
-			// ##### WS Cortes  #####
-			URL url3 = new URL("http://"+host+":9899/WSCortes?wsdl");
-			QName qname3 = new QName("http://MYC/",
-			"WSCortesServerImplService");
+			// // ##### WS Cortes  #####
+			// URL url3 = new URL("http://"+host+":9899/WSCortes?wsdl");
+			// QName qname3 = new QName("http://MYC/",
+			// "WSCortesServerImplService");
 
-			// ##### WS Pandelo  #####
-			URL url4 = new URL("http://"+host+":9898/WSPandelo?wsdl");
-			QName qname4 = new QName("http://MYC/",
-			"WSPandeloServerImplService");
+			// // ##### WS Pandelo  #####
+			// URL url4 = new URL("http://"+host+":9898/WSPandelo?wsdl");
+			// QName qname4 = new QName("http://MYC/",
+			// "WSPandeloServerImplService");
 
-			// ##### WS Recheios  #####
-			URL url5 = new URL("http://"+host+":9899/WSRecheios?wsdl");
-			QName qname5 = new QName("http://MYC/",
-			"WSRecheiosServerImplService");
+			// // ##### WS Recheios  #####
+			// URL url5 = new URL("http://"+host+":9899/WSRecheios?wsdl");
+			// QName qname5 = new QName("http://MYC/",
+			// "WSRecheiosServerImplService");
 
 			Service recepcao = Service.create(url1, qname1);
 			WSRecepcaoServer srecepcao = recepcao.getPort(WSRecepcaoServer.class);
