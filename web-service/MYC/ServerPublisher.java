@@ -68,15 +68,15 @@ public class ServerPublisher {
 
 		// WS Recepcao
 		Endpoint ep = Endpoint.create(new WSRecepcaoServerImpl());
-		ep.publish("http://"+host+":9875/WSRecepcao");
+		ep.publish("http://"+host+":9815/WSRecepcao");
 
 		// WS Pandelo
 		Endpoint ep_pan = Endpoint.create(new WSPandeloServerImpl());
-		ep_pan.publish("http://"+host+":9876/WSPandelo");
+		ep_pan.publish("http://"+host+":9816/WSPandelo");
 
 		// WS Cortes
 		Endpoint ep_cor = Endpoint.create(new WSCortesServerImpl());
-		ep_cor.publish("http://"+host+":9877/WSCortes");
+		ep_cor.publish("http://"+host+":9817/WSCortes");
 
 		// Continuar a declaração dos demais serviços ...
 
@@ -86,7 +86,7 @@ public class ServerPublisher {
 
 		try {
 			// ##### WS Recepcao  #####
-			URL url1 = new URL("http://"+host+":9875/WSRecepcao?wsdl");
+			URL url1 = new URL("http://"+host+":9815/WSRecepcao?wsdl");
 			QName qname1 = new QName("http://MYC/",
 			"WSRecepcaoServerImplService");
 

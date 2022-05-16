@@ -22,7 +22,7 @@ public class Client {
       }
 
       // ##### WS Recepcao  #####
-      URL url1 = new URL("http://"+host+":9875/WSRecepcao?wsdl");
+      URL url1 = new URL("http://"+host+":9815/WSRecepcao?wsdl");
       QName qname1 = new QName("http://MYC/",
       "WSRecepcaoServerImplService");
 
