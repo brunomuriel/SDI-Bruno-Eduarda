@@ -74,49 +74,49 @@ public class ServerPublisher {
 
 		// WS Recepcao
 		Endpoint ep = Endpoint.create(new WSRecepcaoServerImpl());
-		ep.publish("http://"+host+":9845/WSRecepcao");
+		ep.publish("http://"+host+":9835/WSRecepcao");
 
 		// WS Pandelo
 		Endpoint ep_pan = Endpoint.create(new WSPandeloServerImpl());
-		ep_pan.publish("http://"+host+":9846/WSPandelo");
+		ep_pan.publish("http://"+host+":9836/WSPandelo");
 
 		// WS Cortes
 		Endpoint ep_cor = Endpoint.create(new WSCortesServerImpl());
-		ep_cor.publish("http://"+host+":9847/WSCortes");
+		ep_cor.publish("http://"+host+":9837/WSCortes");
 
 		// WS Cobertura
 		Endpoint ep_cob = Endpoint.create(new WSCoberturaServerImpl());
-		ep_cob.publish("http://"+host+":9848/WSCobertura");
+		ep_cob.publish("http://"+host+":9838/WSCobertura");
 
 		// WS Recheios
 		Endpoint ep_rec = Endpoint.create(new WSRecheiosServerImpl());
-		ep_rec.publish("http://"+host+":9849/WSRecheios");
+		ep_rec.publish("http://"+host+":9839/WSRecheios");
 
 		System.out.println("* All done publishing. *");
 
 		try {
 			// ##### WS Recepcao  #####
-			URL url1 = new URL("http://"+host+":9845/WSRecepcao?wsdl");
+			URL url1 = new URL("http://"+host+":9835/WSRecepcao?wsdl");
 			QName qname1 = new QName("http://MYC/",
 			"WSRecepcaoServerImplService");
 
 			// ##### WS Pandelo  #####
-			URL url4 = new URL("http://"+host+":9846/WSPandelo?wsdl");
+			URL url4 = new URL("http://"+host+":9836/WSPandelo?wsdl");
 			QName qname4 = new QName("http://MYC/",
 			"WSPandeloServerImplService");
 
 			// ##### WS Cortes  #####
-			URL url3 = new URL("http://"+host+":9847/WSCortes?wsdl");
+			URL url3 = new URL("http://"+host+":9837/WSCortes?wsdl");
 			QName qname3 = new QName("http://MYC/",
 			"WSCortesServerImplService");
 
 			// // ##### WS Cobertura  #####
-			URL url2 = new URL("http://"+host+":9848/WSCobertura?wsdl");
+			URL url2 = new URL("http://"+host+":9838/WSCobertura?wsdl");
 			QName qname2 = new QName("http://MYC/",
 			"WSCoberturaServerImplService");
 
 			// ##### WS Recheios  #####
-			URL url5 = new URL("http://"+host+":9849/WSRecheios?wsdl");
+			URL url5 = new URL("http://"+host+":9839/WSRecheios?wsdl");
 			QName qname5 = new QName("http://MYC/",
 			"WSRecheiosServerImplService");
 
