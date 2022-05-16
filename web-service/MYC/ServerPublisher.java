@@ -52,9 +52,9 @@ public class ServerPublisher {
 						cliente = Integer.parseInt(word[2]);
 					break;
 
-					case "WS-Pandelo":
-						spandelo.getPandelo(word[2]);
-					break;
+					// case "WS-Pandelo":
+					// 	spandelo.getPandelo(word[2]);
+					// break;
 
 					default:
 						// System.out.println("Ignorado: ("+word[0]+")");
