@@ -1,12 +1,12 @@
 # GNU Makefile - ORIGINAL 
-# JAR=/usr/local/jdk1.8.0_131/bin/jar
-# JAVA=/usr/local/jdk1.8.0_131/bin/java
-# JAVAC=/usr/local/jdk1.8.0_131/bin/javac
+JAR=/usr/local/jdk1.8.0_131/bin/jar
+JAVA=/usr/local/jdk1.8.0_131/bin/java
+JAVAC=/usr/local/jdk1.8.0_131/bin/javac
 
 #Local - Eduarda
-JAR=/usr/lib/jvm/java-8-openjdk-amd64/bin/jar
-JAVA=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
-JAVAC=/usr/lib/jvm/java-8-openjdk-amd64/bin/javac
+# JAR=/usr/lib/jvm/java-8-openjdk-amd64/bin/jar
+# JAVA=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+# JAVAC=/usr/lib/jvm/java-8-openjdk-amd64/bin/javac
 
 JFLAGS = -g
 .SUFFIXES: MYC/.java .class

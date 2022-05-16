@@ -39,6 +39,9 @@ public class ServerPublisher {
 				BufferedReader inFromUser
 				= new BufferedReader(new InputStreamReader(System.in));
 				String[] word = newline.split(" ");
+				
+				System.out.print("oi\n");
+
 				switch (word[0]) {
 					case "NClientes":
 					      srecepcao.setServer(Integer.parseInt(word[2]));
@@ -78,7 +81,6 @@ public class ServerPublisher {
 		ep_cor.publish("http://"+host+":9877/WSCortes");
 
 		// Continuar a declaração dos demais serviços ...
-		// ...
 
 		// ...
 
