@@ -101,22 +101,22 @@ public class ServerPublisher {
 			"WSRecepcaoServerImplService");
 
 			// ##### WS Cobertura  #####
-			URL url2 = new URL("http://"+host+":9875/WSCobertura?wsdl");
+			URL url2 = new URL("http://"+host+":9876/WSCobertura?wsdl");
 			QName qname2 = new QName("http://MYC/",
 			"WSCoberturaServerImplService");
 
 			// ##### WS Cortes  #####
-			URL url3 = new URL("http://"+host+":9875/WSCortes?wsdl");
+			URL url3 = new URL("http://"+host+":9877/WSCortes?wsdl");
 			QName qname3 = new QName("http://MYC/",
 			"WSCortesServerImplService");
 
 			// ##### WS Pandelo  #####
-			URL url4 = new URL("http://"+host+":9875/WSPandelo?wsdl");
+			URL url4 = new URL("http://"+host+":9878/WSPandelo?wsdl");
 			QName qname4 = new QName("http://MYC/",
 			"WSPandeloServerImplService");
 
 			// ##### WS Recheios  #####
-			URL url5 = new URL("http://"+host+":9875/WSRecheios?wsdl");
+			URL url5 = new URL("http://"+host+":9879/WSRecheios?wsdl");
 			QName qname5 = new QName("http://MYC/",
 			"WSRecheiosServerImplService");
 
