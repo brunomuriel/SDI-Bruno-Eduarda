@@ -48,11 +48,11 @@ public class ServerPublisher {
 					//     srecepcao.setServer(Integer.parseInt(word[2]));
 					// break;
 
-					case "****"
+					case "****":
 						cliente = Integer.parseInt(word[2]);
 					break;
 
-					case "WS-Pandelo"
+					case "WS-Pandelo":
 						spandelo.getPandelo();
 					break;
 
