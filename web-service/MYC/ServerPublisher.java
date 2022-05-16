@@ -86,11 +86,11 @@ public class ServerPublisher {
 
 		// WS Cobertura
 		Endpoint ep_cob = Endpoint.create(new WSCoberturaServerImpl());
-		ep_cob.publish("http://"+host+":9877/WSCobertura");
+		ep_cob.publish("http://"+host+":9878/WSCobertura");
 
 		// WS Recheios
 		Endpoint ep_rec = Endpoint.create(new WSRecheiosServerImpl());
-		ep_rec.publish("http://"+host+":9877/WSRecheios");
+		ep_rec.publish("http://"+host+":9879/WSRecheios");
 
 		System.out.println("* All done publishing. *");
 
