@@ -7,7 +7,7 @@ public class WSPandeloServerImpl implements WSPandeloServer {
 
   private static int NPandelos = 0;
 
-	public String getPandelo(String host, String name) {
+	public String getPandelo(String name) {
     NPandelos++;
     // System.out.println("##  Cliente ("+host+") "+name+"  ##");
     // System.out.println("Status: Pronto");

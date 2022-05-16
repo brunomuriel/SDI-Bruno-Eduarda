@@ -53,7 +53,7 @@ public class ServerPublisher {
 					break;
 
 					case "WS-Pandelo":
-						spandelo.getPandelo();
+						spandelo.getPandelo(word[2]);
 					break;
 
 					default:
