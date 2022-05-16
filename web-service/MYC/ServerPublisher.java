@@ -47,22 +47,22 @@ public class ServerPublisher {
 					break;
 
 					case "WS-Pandelo":
-						spandelo.getPandelo(word[2]);
+						// spandelo.getPandelo(word[2]);
 						guiches[0] = guiches[0] + 1;
 					break;
 
 					case "WS-Cortes":
-						scortes.getCortes(word[2]);
+						// scortes.getCortes(word[2]);
 						guiches[1] = guiches[1] + 1;
 					break;
 
 					case "WS-Cobertura":
-						scobertura.getCobertura(word[2]);
+						// scobertura.getCobertura(word[2]);
 						guiches[2] = guiches[2] + 1;
 					break;
 
 					case "WS-Recheios":
-						srecheios.getRecheios(word[2]);
+						// srecheios.getRecheios(word[2]);
 						guiches[3] = guiches[3] + 1;
 					break;
 
