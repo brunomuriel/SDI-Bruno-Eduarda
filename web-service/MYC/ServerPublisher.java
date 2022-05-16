@@ -16,15 +16,19 @@ import java.io.*;
 public class ServerPublisher {
 
 	static void printReport(WSRecepcaoServer srecepcao) {
-      System.out.println("##  Servidor  ##");
-      System.out.println("Status: finalizado");
-      System.out.println("Nro_clientes_atendidos: " +  srecepcao.getNroClient());
-      System.out.println("WS-Pandelo (ens1): 4");
-      System.out.println("WS-Cobertura (ens1): 2");
-      System.out.println("WS-Recheio (ens1): 8");
-      System.out.println("WS-Cortes (ens1): 4");
-      System.out.println("WS-Recepcao (ens1): 18");
-      System.out.println("###########");
+		try { 
+			System.out.println("##  Servidor  ##");
+			System.out.println("Status: finalizado");
+			System.out.println("Nro_clientes_atendidos: " +  srecepcao.getNroClient());
+			System.out.println("WS-Pandelo (ens1): 4");
+			System.out.println("WS-Cobertura (ens1): 2");
+			System.out.println("WS-Recheio (ens1): 8");
+			System.out.println("WS-Cortes (ens1): 4");
+			System.out.println("WS-Recepcao (ens1): 18");
+			System.out.println("###########");
+	  	}catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 	static void readSetup (String host, WSRecepcaoServer srecepcao) {
