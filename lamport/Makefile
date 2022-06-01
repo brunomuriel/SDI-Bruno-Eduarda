@@ -8,18 +8,10 @@ JFLAGS = -g
 .java.class:
 	$(JAVAC) $(JFLAGS) $*.java
 
-# default: Event LamportClock Main Request
-
-# Event: Event.java
-# 	$(JAVAC) $(JFLAGS) Event.java
-
-# WSRecepcaoServerImpl: MYC/WSRecepcaoServerImpl.java
-#   $(JAVAC) $(JFLAGS) MYC/WSRecepcaoServerImpl.java
-
 CLASSES = \
-	Event.java\
-	LamportClock.java\
-	Main.java
+	Event.java\ 
+	LamportClock.java\ 
+	Main.java\ 
 	Request.java
 
 default: classes
